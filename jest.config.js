@@ -3,6 +3,5 @@
 // SPDX-License-Identifier: MIT
 
 export default {
-  preset: 'ts-jest',
   testEnvironment: 'jsdom',
 };

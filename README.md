@@ -7,9 +7,10 @@ devcontainers in VS Code.
 
 1. Clone this repository and replace all instances of the text `foundryvtt-dev-system` with your system name
 2. Rename the `src/module/foundryvtt-dev-system.ts` file to match your system name
-3. Ensure the `src/system.json' field is updated with approrpiate values
-4. Ensure the `package.json` file is updated with appropriate values 
-5. Update the rest of this README.md file to align with your module workflow
+3. Rename the `src/styles/foundryvtt-dev-system.scss` file to match your system name
+4. Ensure the `src/system.json' field is updated with approrpiate values
+5. Ensure the `package.json` file is updated with appropriate values 
+6. Update the rest of this README.md file to align with your module workflow
 
 ## Installation
 

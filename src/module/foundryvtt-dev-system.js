@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: MIT
 
 /**
- * This is your TypeScript entry file for Foundry VTT.
+ * This is your JavaScript entry file for Foundry VTT.
  * Register custom settings, sheets, and constants using the Foundry API.
  * Change this heading to be more descriptive to your system, or remove it.
  * Author: [your name]
@@ -14,9 +14,9 @@
  * 					 determines how others may use and modify your system.
  */
 
-// Import TypeScript modules
-import { registerSettings } from './settings';
-import { preloadTemplates } from './preloadTemplates';
+// Import JavaScript modules
+import { registerSettings } from './settings.js';
+import { preloadTemplates } from './preloadTemplates.js';
 
 // Initialize system
 Hooks.once('init', async () => {

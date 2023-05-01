@@ -4,22 +4,24 @@
 // SPDX-License-Identifier: MIT
 
 module.exports = {
-  parser: '@typescript-eslint/parser',
-
   parserOptions: {
     ecmaVersion: 2020,
     extraFileExtensions: ['.cjs', '.mjs'],
     sourceType: 'module',
-    project: './tsconfig.eslint.json',
   },
 
   env: {
     browser: true,
   },
 
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:jest/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'eslint:recommended',
+    '@typhonjs-fvtt/eslint-config-foundry.js/0.8.0',
+    'plugin:jest/recommended',
+    'plugin:prettier/recommended',
+  ],
 
-  plugins: ['@typescript-eslint', 'jest'],
+  plugins: ['jest'],
 
   rules: {
     // Specify any specific ESLint rules.
@@ -27,9 +29,15 @@ module.exports = {
 
   overrides: [
     {
-      files: ['./*.cjs'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off',
+      files: ['./*.js', './*.cjs', './*.mjs'],
+      env: {
+        node: true,
+      },
+    },
+    {
+      files: ['./test/**/*.js'],
+      env: {
+        'jest/globals': true,
       },
     },
   ],
